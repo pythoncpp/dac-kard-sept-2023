@@ -1,6 +1,9 @@
 const express = require('express')
 
 const app = express()
+app.use((request, response, next) => {
+  next()
+})
 
 app.delete('/', (request, response) => {
   response.send('this is a DELETE route')
