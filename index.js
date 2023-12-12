@@ -2,6 +2,10 @@ const express = require('express')
 
 const app = express()
 
+app.delete('/', (request, response) => {
+  response.send('this is a DELETE route')
+})
+
 app.get('/', (request, response) => {
   response.send('welcome to my express app')
 })
