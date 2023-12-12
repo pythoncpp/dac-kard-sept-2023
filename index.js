@@ -2,6 +2,10 @@ const express = require('express')
 const mysql = require('mysql')
 
 const app = express()
+
+const userRouter = require('./routes/user')
+app.use('/user', userRouter)
+
 app.use((request, response, next) => {
   next()
 })
