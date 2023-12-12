@@ -4,6 +4,7 @@ const app = express()
 app.use((request, response, next) => {
   next()
 })
+app.use(express.json())
 
 app.delete('/', (request, response) => {
   response.send('this is a DELETE route')
